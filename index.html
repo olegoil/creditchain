@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CreditChain 2.0</title>
+    <meta charset="utf-8">
+    <!-- Custom styling plus plugins -->
+    <link href="custom.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+   -->
+    <!-- Bootstrap core JavaScript -->
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+   -->
+    <!-- MDB core JavaScript -->
+    <!--   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+ -->
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="container body">
+                <div class="main_container">
+        <nav class="navbar navbar-dark danger-color">
+            <div class="container">
+                <a class="navbar-brand">CreditChain 2.0</a>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <div class="form-inline my-2 my-lg-0" id="navbar-right">
+                        <a class="github-corner" target="_blank" href="https://github.com/epexa/golosimages" tabindex="-1">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+    </header>
+    <article>
+      <br>
+        <div class="container">
+            <div class="container body">
+                <div class="main_container">
+                    <!--drag-->
+                    <div class="row" style="display:flex;flex-flow:column nowrap;align-items: center;">
+                        <div>
+                            <form action="/hu" method="POST" id="dropzOne" class="dropzone" style="width: 1080px;"></form>
+                        </div>
+                    </div>
+                    <!-- drag-->
+                    <br>
+                    <div id="loaderDiv">
+                        
+                    </div>
+                    <!--Table-->
+                    <table class="table table-bordered table-responsive-md text-center">
+
+                        <!--Table head-->
+                        <thead>
+                            <tr>
+                                <th class="th-sm">
+                                    <button type="button" id="golos-explorer" class="btn btn-primary btn-sm">#</button>
+                                </th>
+                                <th>Статус</th>
+                                <th class="th-lg">Trx</th>
+                            </tr>
+                        </thead>
+                        <!--Table head-->
+
+                        <!--Table body-->
+                        <tbody id="t-body">
+                        </tbody>
+                        <!--Table body-->
+
+                    </table>
+                    <!--Table-->
+
+                </div>
+            </div>
+        </div>
+    </article>
+    <script>
+    	function fTotable(status, hash){
+    		let tr = document.createElement('tr');
+    		tr.innerHTML = `<tr>
+                                <th>
+                                    <input type="checkbox" class="filled-in" id="123TURRME13217N6S3910yZDQ0OTXlPRFk0WTJJeE4yUTJOR1JqWXp1ZqWXpjNVl6QmlZVGhrTXpCaE5qYzFObV">
+                                    <label for="checkbox124" class="label-table"></label>
+                                </th>
+                                <td>${status}</td>
+                                <td>${hash}</td>
+                            </tr>`
+    		document.getElementById('t-body').appendChild(tr);
+    	}
+    </script>
+    <script>
+    	
+    	fetch('move').then(function(response) {
+            return response.json();
+        }).then(function(mytext) {
+            let js = JSON.parse(mytext);
+            fTotable(js.status, js.hash)
+});
+    </script>
+    <script>
+        document.getElementById('t-body').addEventListener('click', (e) => {
+            console.log(e.target.id);
+        });
+    </script>
+    <script>
+        document.getElementById('golos-explorer').addEventListener('click',()=>{
+            window.open('https://explorer.golos.io/','_blank');
+        })
+    </script>
+    <footer class="footer">
+        <div class="container d-flex justify-content-center">
+            <span class="text-muted">CreditChain 2.0 @ 2018</span>
+        </div>
+    </footer>
+</body>
+<script src="dropzone.min.js"></script>
+<script src="script.js"></script>
+<script src="swal2.js"></script>
+</html>

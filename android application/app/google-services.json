@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "409509255444",
+    "firebase_url": "https://credit-chain-2-0.firebaseio.com",
+    "project_id": "credit-chain-2-0",
+    "storage_bucket": "credit-chain-2-0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409509255444:android:efbddcd5e74304c4",
+        "android_client_info": {
+          "package_name": "com.creditchain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409509255444-sad3psrrfpmrji2mpt36f6ardt4hqj90.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.creditchain",
+            "certificate_hash": "f5fcedbab6dd8b214c16bb74294830c2a679c43a"
+          }
+        },
+        {
+          "client_id": "409509255444-ucim8ihibtet333crnbkkbnanb04vmvv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN7UeFzRPJeikHFMLwv6DangoKoFKXGRQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409509255444-ucim8ihibtet333crnbkkbnanb04vmvv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
